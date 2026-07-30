@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HydraFit Daily Tracker</title>
+
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <header class="header">
+
+        <h1>
+            HydraFit 💧
+        </h1>
+
+
+        <button id="themeToggle">
+            🌙 Toggle Theme
+        </button>
+
+
+    </header>
+
+
+
+    <main class="dashboard">
+
+
+        <!-- Water Tracker Card -->
+
+        <section class="card">
+
+            <h2>
+                Hydration Tracker
+            </h2>
+
+
+            <p>
+                Daily Goal:
+                <strong>2500 ml</strong>
+            </p>
+
+
+            <div class="progress-container">
+
+                <div id="waterProgress">
+
+                </div>
+
+            </div>
+
+
+            <p id="waterText">
+                0 / 2500 ml
+            </p>
+
+
+            <div class="buttons">
+
+
+                <button id="addCup">
+                    +250ml Cup
+                </button>
+
+
+                <button id="addBottle">
+                    +500ml Bottle
+                </button>
+
+
+                <button id="resetWater">
+                    Reset
+                </button>
+
+
+            </div>
+
+
+            <p id="goalMessage"></p>
+
+
+        </section>
+
+
+
+
+
+        <!-- Habit Tracker Card -->
+
+
+        <section class="card">
+
+
+            <h2>
+                Habit Tracker 🔥
+            </h2>
+
+
+            <input type="text" placeholder="Enter new habit" id="habitInput">
+
+
+            <button id="addHabit">
+                Add Habit
+            </button>
+
+
+            <p id="habitWarning"></p>
+
+
+            <div id="habitList">
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <!-- Calorie Calculator Card -->
+
+
+        <section class="card">
+
+
+            <h2>
+                Active Calories
+            </h2>
+
+
+
+            <select id="activity">
+
+                <option value="11">
+                    Running (11 kcal/min)
+                </option>
+
+
+                <option value="8">
+                    Cycling (8 kcal/min)
+                </option>
+
+
+                <option value="4">
+                    Yoga (4 kcal/min)
+                </option>
+
+
+            </select>
+
+
+
+            <input type="number" placeholder="Duration minutes" id="duration">
+
+
+
+            <button id="calculateCalories">
+                Calculate & Add
+            </button>
+
+
+
+            <h3>
+
+                Calories:
+                <span id="calories">
+                    0
+                </span>
+
+            </h3>
+
+
+
+        </section>
+
+
+    </main>
+    <footer>
+
+
+    <p>
+        HydraFit © 2026 | Daily Health Tracker
+    </p>
+
+
+</footer>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

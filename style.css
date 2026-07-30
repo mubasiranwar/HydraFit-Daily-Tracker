@@ -1,0 +1,552 @@
+/* ==========================
+   GLOBAL THEME VARIABLES
+========================== */
+
+
+:root {
+
+    --bg-color: #f5f7fb;
+
+    --card-color: white;
+
+    --text-color: #222;
+
+    --primary-color: #3b82f6;
+
+    --secondary-color: #22c55e;
+
+    --danger-color: #ef4444;
+
+    --border-color: #ddd;
+
+}
+
+
+
+/* DARK MODE VARIABLES */
+
+body.dark {
+
+    --bg-color: #121212;
+
+    --card-color: #1e1e1e;
+
+    --text-color: #ffffff;
+
+    --border-color: #333;
+
+}
+
+
+
+
+
+
+/* ==========================
+   BASIC RESET
+========================== */
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+
+
+    font-family:
+
+        Arial, Helvetica, sans-serif;
+
+
+    background: var(--bg-color);
+
+
+    color: var(--text-color);
+
+
+    min-height: 100vh;
+
+
+    transition: 0.3s;
+
+
+}
+
+
+
+
+
+/* ==========================
+        HEADER
+========================== */
+
+
+.header {
+
+
+    display: flex;
+
+
+    justify-content: space-between;
+
+
+    align-items: center;
+
+
+    padding: 20px;
+
+
+}
+
+
+
+.header h1 {
+
+
+    font-size: 32px;
+
+
+}
+
+
+
+
+
+.header button {
+
+
+    padding: 10px 18px;
+
+
+    border: none;
+
+
+    cursor: pointer;
+
+
+    border-radius: 8px;
+
+
+    background: var(--primary-color);
+
+
+    color: white;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+       DASHBOARD GRID
+========================== */
+
+
+.dashboard {
+
+
+    width: 90%;
+
+
+    margin: auto;
+
+
+    display: grid;
+
+
+    grid-template-columns: repeat(3, 1fr);
+
+
+    gap: 25px;
+
+
+    padding: 20px;
+
+
+
+}
+
+
+
+
+
+
+/* ==========================
+          CARDS
+========================== */
+
+
+.card {
+
+    background: var(--card-color);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    border: 1px solid var(--border-color);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+
+.card h2 {
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+
+
+
+/* ==========================
+       INPUTS & BUTTONS
+========================== */
+
+
+
+input,
+select {
+
+
+    width: 100%;
+
+
+    padding: 12px;
+
+
+    margin: 10px 0;
+
+
+    border-radius: 8px;
+
+
+    border: 1px solid var(--border-color);
+
+
+    background: transparent;
+
+
+    color: var(--text-color);
+
+
+
+}
+
+
+
+
+button {
+
+
+    padding: 12px 18px;
+
+
+    margin: 5px;
+
+
+    border: none;
+
+
+    border-radius: 10px;
+
+
+    cursor: pointer;
+
+
+    background: var(--primary-color);
+
+
+    color: white;
+
+
+    transition: 0.3s;
+
+
+}
+
+
+
+button:hover {
+
+
+    opacity: 0.85;
+
+
+    transform: scale(1.05);
+
+
+}
+
+
+
+
+
+
+/* ==========================
+       PROGRESS BAR
+========================== */
+
+
+.progress-container {
+
+
+    width: 100%;
+
+
+    height: 25px;
+
+
+    background: #ddd;
+
+
+    border-radius: 20px;
+
+
+    overflow: hidden;
+
+
+}
+
+
+
+#waterProgress {
+
+
+    height: 100%;
+
+
+    width: 0%;
+
+
+    background: var(--primary-color);
+
+
+    transition: width 0.5s ease;
+
+
+}
+
+
+
+#habitWarning {
+
+    color: red;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+}
+
+.habit-item {
+
+
+    margin-top: 15px;
+
+
+    padding: 15px;
+
+
+    background: var(--bg-color);
+
+
+    border-radius: 15px;
+
+
+    border-left: 5px solid var(--secondary-color);
+
+
+    animation: slideIn 0.3s;
+
+
+}
+
+
+
+@keyframes slideIn {
+
+
+    from {
+
+
+        opacity: 0;
+
+
+        transform: translateX(-20px);
+
+
+    }
+
+
+    to {
+
+
+        opacity: 1;
+
+
+        transform: translateX(0);
+
+
+    }
+
+
+}
+
+
+@keyframes slideIn {
+
+
+    from {
+
+
+        opacity: 0;
+
+
+        transform: translateX(-20px);
+
+
+    }
+
+
+    to {
+
+
+        opacity: 1;
+
+
+        transform: translateX(0);
+
+
+    }
+
+
+}
+
+
+.habit-item button {
+
+    margin-top: 10px;
+
+}
+
+
+
+
+
+
+/* ==========================
+       MOBILE RESPONSIVE
+========================== */
+
+
+@media(max-width:900px) {
+
+
+    .dashboard {
+
+
+        width: 95%;
+
+
+        grid-template-columns: 1fr;
+
+
+    }
+
+
+
+    .header {
+
+
+        padding: 15px;
+
+
+    }
+
+
+
+    .card {
+
+
+        padding: 20px;
+
+
+    }
+
+
+}
+
+
+#goalMessage {
+
+
+    margin-top: 15px;
+
+
+    padding: 10px;
+
+
+    border-radius: 10px;
+
+
+    background: #dcfce7;
+
+
+    color: #166534;
+
+
+    font-weight: bold;
+
+
+    text-align: center;
+
+
+}
+
+
+/* Css for footer */
+
+footer{
+
+
+    text-align:center;
+
+
+    padding:20px;
+
+
+    opacity:0.7;
+
+
+}
