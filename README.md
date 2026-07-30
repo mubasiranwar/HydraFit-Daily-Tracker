@@ -1,6 +1,6 @@
 # 💧 HydraFit — Daily Health & Habit Tracker
 
-![HydraFit Banner](https://via.placeholder.com/1200x400?text=HydraFit+Daily+Tracker)
+
 
 ## 📌 Overview
 
@@ -241,15 +241,6 @@ No installation or dependencies are required.
 
 ![HydraFit Dark Mode](screenshots/dashboard-dark.png)
 
-Example:
-
-```
-screenshots/
-│
-├── dashboard.png
-├── dark-mode.png
-
-```
 
 ---
 
